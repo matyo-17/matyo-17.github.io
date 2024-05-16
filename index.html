@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filson Teo</title>
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/137868189?v=4">
+    
+    <link href="css/bootstrap-5.3.3.min.css" rel="stylesheet">
+    <link href="css/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap-5.3.3.min.js"></script>
+    <script src="js/fontawesome-6.5.2.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body data-bs-theme="dark">
+    <!-- loader -->
+    <div class="justify-content-center align-items-center" id="loader-container">
+        <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- end loader -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://avatars.githubusercontent.com/u/137868189?v=4" alt="logo" 
+                        width="30" height="30" class="d-inline-block align-text-top rounded-5">
+                <span class="h5">Filson Teo</span>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-offcanvas" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="offcanvas offcanvas-end flex-grow-1 bg-primary" id="navbar-offcanvas">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="#">
+                        <span class="h5">Teo Filson</span>
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <hr class="d-md-none m-0">
+                <div class="offcanvas-body">
+                    <div class="navbar-nav me-auto">
+                        <a class="btn btn-link nav-link" href="#experience">Expericence</a>
+                        <a class="btn btn-link nav-link" href="#skills">Skills</a>
+                        <a class="btn btn-link nav-link" href="#education">Education</a>
+                    </div>
+    
+                    <div class="navbar-nav ms-auto">
+                        <button class="btn btn-link nav-link px-3" onclick="goGithubPage()" type="button">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="d-md-none">&nbsp;Github</span>
+                        </button>
+                        <button class="btn btn-link nav-link px-3" onclick="toggleDarkTheme()" type="button">
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                            <span class="d-md-none">&nbsp;Dark Theme</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <div class="container p-3">
+        <!-- general information -->
+        <div class="card m-3 shadow-lg">
+            <h5 class="card-header text-center">
+                <i class="fa-solid fa-address-card"></i>&nbsp;
+                General Information
+            </h5>
+            <div class="card-body">
+                <p class="card-text">
+                    Hi there 👋, I am Teo Filson 
+                    <a href="https://github.com/matyo-17" target="_blank">@matyo-17</a>,
+                    a software engineer based in Malaysia
+                    <br>
+                </p>
+
+                <span class="card-text">
+                    Aside from building software, I am also interested in:
+                    <ul>
+                        <li>artificial intelligence</li>
+                        <li>machine learning</li>
+                        <li>robotics</li>
+                        <li>image processing</li>
+                    </ul>
+                </span>
+                
+                <p class="card-text m-0">
+                    My timezone: 
+                    <span class="text-primary fw-bold">Asia/Kuala_Lumpur (UTC+8)</span>
+                    <div class="border border-primary border-3 rounded p-3 text-center">
+                        <span id="clock" class="font-monospace fs-3 fw-bold"></span>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <!-- endgeneral information -->
+
+        <br id="experience">
+
+        <!-- experience -->
+        <div class="card m-3 shadow-lg">
+            <h5 class="card-header text-center">
+                <i class="fa-solid fa-briefcase"></i>&nbsp;
+                Experience
+            </h5>
+            <div class="card-body">
+                <div class="row">
+                    <h6 class="card-subtitle text-body-secondary">
+                        Tornado Internet Sdn. Bhd
+                        &nbsp;
+                        <span class="badge rounded-pill text-bg-primary">2022 - present</span>
+                    </h6>
+                    <p class="card-text">
+                        A software development company that builds systems and websites that provides 
+                        technology solutions to users.
+                        <br>
+                        Website: 
+                        <a href="http://tornadointernet.co" target="_blank">http://tornadointernet.co</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end experience -->
+
+        <br id="skills">
+
+        <!-- skills -->
+        <div class="card m-3 shadow-lg">
+            <h5 class="card-header text-center">
+                <i class="fa-solid fa-code"></i>&nbsp;
+                Skills
+            </h5>
+            <div class="card-body">
+                <div class="row">
+                    <h6 class="card-subtitle text-body-secondary">
+                        Programming Languages (Backend)
+                    </h6>
+                    <span class="card-text">
+                        <ul>
+                            <li><img src="images/php.png" class="skills-icon" title="php">&nbsp;PHP</li>
+                            <li><img src="images/python.png" class="skills-icon" title="python">&nbsp;Python</li>
+                            <li><img src="images/java.png" class="skills-icon" title="java">&nbsp;JAVA</li>
+                            <li><img src="images/c.png" class="skills-icon" title="c">&nbsp;C</li>
+                        </ul>
+                    </span>
+
+                    <h6 class="card-subtitle text-body-secondary">
+                        Frontend
+                    </h6>
+                    <span class="card-text">
+                        <ul>
+                            <li><img src="images/js.png" class="skills-icon" title="javascript">&nbsp;JavaScript</li>
+                            <li><img src="images/html.png" class="skills-icon" title="html">&nbsp;HTML</li>
+                            <li><img src="images/css.png" class="skills-icon" title="css">&nbsp;CSS</li>
+                        </ul>
+                    </span>
+
+                    <h6 class="card-subtitle text-body-secondary">
+                        Databases
+                    </h6>
+                    <span class="card-text">
+                        <ul>
+                            <li><img src="images/mysql.png" class="skills-icon" title="mysql">&nbsp;MySql</li>
+                            <li><img src="images/sqlite.png" class="skills-icon" title="sqlite">&nbsp;SQLite</li>
+                            <li><img src="images/redis.png" class="skills-icon" title="redis">&nbsp;Redis</li>
+                        </ul>
+                    </span>
+
+                    <h6 class="card-subtitle text-body-secondary">
+                        Version Control
+                    </h6>
+                    <span class="card-text">
+                        <ul>
+                            <li><img src="images/git.png" class="skills-icon" title="git">&nbsp;Git</li>
+                            <li><img src="images/github-dark.png" class="skills-icon" title="github" id="github-icon">&nbsp;GitHub</li>
+                            <li><img src="images/gitlab.png" class="skills-icon" title="gitlab">&nbsp;GitLab</li>
+                        </ul>
+                    </span>
+
+                    <h6 class="card-subtitle text-body-secondary">
+                        Tools
+                    </h6>
+                    <span class="card-text">
+                        <ul>
+                            <li><img src="images/vscode.png" class="skills-icon" title="vscode">&nbsp;Visual Studio Code</li>
+                            <li><img src="images/postman.png" class="skills-icon" title="postman">&nbsp;Postman</li>
+                        </ul>
+                    </span>
+
+                    <h6 class="card-subtitle text-body-secondary">
+                        Others
+                    </h6>
+                    <span class="card-text">
+                        <ul>
+                            <li><img src="images/haskell.png" class="skills-icon" title="haskell">&nbsp;Haskell</li>
+                            <li><img src="images/matlab.png" class="skills-icon" title="matlab">&nbsp;MATLAB</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- end skills -->
+
+        <br id="education">
+
+        <!-- experience -->
+        <div class="card m-3 shadow-lg">
+            <h5 class="card-header text-center">
+                <i class="fa-solid fa-graduation-cap"></i>&nbsp;
+                Education
+            </h5>
+            <div class="card-body">
+                <div class="row">
+                    <h6 class="card-subtitle text-body-secondary">
+                        University of Nottingham Malaysia
+                    </h6>
+                    <p class="card-text">
+                        <span class="badge rounded-pill text-bg-info">2019 - 2022</span>
+                        &nbsp;
+                        BSc (Hons) Computer Science
+                        <br>
+                        <span class="badge rounded-pill text-bg-info">2018 - 2019</span>
+                        &nbsp;
+                        Foundation in Science
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end experience -->
+    </div>
+
+    <footer class="py-3 bg-body-tertiary">
+        <p class="text-center text-body-secondary m-0">
+            Made with ❤️ by 
+            <a href="https://github.com/matyo-17" target="_blank">@matyo-17</a>
+        </p>
+    </footer>
+</body>
+</html>
