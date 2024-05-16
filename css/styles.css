@@ -31,6 +31,10 @@ a {
     height: 1.7rem;
 }
 
+.section {
+    scroll-margin-top: 60px;
+}
+
 #clock {
     color: #ff0000;
 }
