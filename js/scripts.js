@@ -64,7 +64,9 @@ function iconTheme(theme) {
 }
 
 function updateClock() {
-    t = new Date();
+    local = new Date();
+    utc = local.getTime() + (local.getTimezoneOffset() * 60000);
+    t = new Date(utc + (3600000 * 8));
 
     y = t.getFullYear().toString();
     m = t.getMonth().toString();
