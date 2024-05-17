@@ -24,6 +24,58 @@
     </div>
     <!-- end loader -->
 
+    <!-- toast -->
+    <div class="toast-container position-absolute top-0 end-0 m-3">
+        <div class="toast top-0 end-0" id="toast" role="alert">
+            <div class="toast-header">
+                <strong class="me-auto" id="toast-title"></strong>
+            </div>
+            <div class="toast-body" id="toast-message"></div>
+        </div>
+    </div>
+    <!-- end toast -->
+
+    <!-- consent -->
+    <div class="modal modal-lg fade" data-bs-backdrop="static" tabindex="-1" id="consent">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cookies & Privacy</h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This website uses cookies and collects information to ensure you get the best experience.
+                    </p>
+
+                    Cookies:
+                    <ul>
+                        <li>
+                            <div class="fw-bold text-body-secondary">Concent</div>
+                            Cookie consent accept status.
+                        </li>
+                        <li>
+                            <div class="fw-bold text-body-secondary">Theme</div>
+                            Your theme preference
+                        </li>
+                    </ul>
+
+                    Information:
+                    <ul>
+                        <li>
+                            <div class="fw-bold text-body-secondary">Local timezone</div>
+                            Timezone of your location.
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" onclick="rejectConsent()">Reject</button>
+                    <button type="button" class="btn btn-primary" onclick="giveConsent()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- endd consent -->
+
     <!-- navbar -->
     <nav class="navbar navbar-expand-md bg-primary sticky-top">
         <div class="container-fluid">
@@ -49,10 +101,15 @@
                     <div class="navbar-nav me-auto">
                         <a class="btn btn-link nav-link" href="#experience">Expericence</a>
                         <a class="btn btn-link nav-link" href="#skills">Skills</a>
+                        <a class="btn btn-link nav-link" href="#projects">Projects</a>
                         <a class="btn btn-link nav-link" href="#education">Education</a>
                     </div>
     
                     <div class="navbar-nav ms-auto">
+                        <button class="btn btn-link nav-link px-3" onclick="displayConcent()" type="button">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span class="d-md-none">&nbsp;Cookies & Privacy</span>
+                        </button>
                         <button class="btn btn-link nav-link px-3" onclick="goGithubPage()" type="button">
                             <i class="fa-brands fa-github"></i>
                             <span class="d-md-none">&nbsp;Github</span>
@@ -113,9 +170,9 @@
             <div class="card-body">
                 <div class="row">
                     <h6 class="card-subtitle text-body-secondary">
-                        Tornado Internet Sdn. Bhd
-                        &nbsp;
                         <span class="badge rounded-pill text-bg-primary">2022 - present</span>
+                        &nbsp;
+                        Tornado Internet Sdn. Bhd
                     </h6>
                     <p class="card-text">
                         A software development company that builds systems and websites that provides 
@@ -205,6 +262,34 @@
             </div>
         </div>
         <!-- end skills -->
+
+        <!-- projects -->
+        <div class="card m-3 shadow-lg section" id="projects">
+            <h5 class="card-header text-center">
+                <i class="fa-solid fa-list-check"></i>&nbsp;
+                Current & Previous Projects
+            </h5>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action">
+                        Cryptocurrency algorithmic trading bot
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        Payment Gateways
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        Web scraper
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        Stream ciphers
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        Research paper search engine
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end projects -->
 
         <!-- education -->
         <div class="card m-3 shadow-lg section" id="education">

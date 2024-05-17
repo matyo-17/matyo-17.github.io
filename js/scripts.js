@@ -1,7 +1,8 @@
 $(window).on("load", function() {
+    checkConsent();
+    loadTheme();
     updateClock();
     setInterval(updateClock, 1000);
-    loadTheme();
 
     setTimeout(function () {
         $('#loader-container').css("opacity", 0.5);
@@ -10,6 +11,10 @@ $(window).on("load", function() {
     setTimeout(function () {
         $('#loader-container').css({"opacity": 0, "display": "none"});
     }, 500);
+
+    $(".nav-link").click(function(){
+        $('#navbar-offcanvas').offcanvas('hide');
+    });
 });
 
 function getCookie(name) {
@@ -28,8 +33,8 @@ function getCookie(name) {
     return null;
 }
 
-function setCookie(name, value) {
-    document.cookie = name + "=" + encodeURIComponent(value) + "; max-age=" + (15 * 60) + ";";
+function setCookie(name, value, minutes=15) {
+    document.cookie = name + "=" + encodeURIComponent(value) + "; max-age=" + (minutes * 60) + ";";
 }
 
 function goGithubPage() {
@@ -42,6 +47,40 @@ function toggleDarkTheme() {
     iconTheme(new_theme);
     setCookie('theme', new_theme);
     $("body").attr("data-bs-theme", new_theme);
+}
+
+function checkConsent() {
+    consent = getCookie('consent');
+    if (!consent) {
+        displayConcent();
+    }
+}
+
+function displayConcent() {
+    $('#consent').modal('show');
+}
+
+function giveConsent() {
+    setCookie('consent', 1, 60);
+    $('#consent').modal('hide');
+}
+
+function rejectConsent() {
+    toast('danger', 'Error', 'Rejecting is not an option!!!');
+}
+
+function toast(type, title, message) {
+    toast_item = $('#toast');
+    toast_item.addClass("text-bg-"+type)
+    $('#toast-title').html(title);
+    $('#toast-message').html(message);
+
+    toast_item.toast({
+        animation: true, 
+        autohide: true,
+        delay: 2000
+    });
+    toast_item.toast("show");
 }
 
 function loadTheme() {
