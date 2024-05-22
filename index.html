@@ -68,13 +68,13 @@
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" onclick="rejectConsent()">Reject</button>
-                    <button type="button" class="btn btn-primary" onclick="giveConsent()">Confirm</button>
+                    <button type="button" class="btn btn-outline-secondary" id="reject-consent" onclick="rejectConsent()">Reject</button>
+                    <button type="button" class="btn btn-primary" onclick="giveConsent()">Accept</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- endd consent -->
+    <!-- end consent -->
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-md bg-primary sticky-top">
@@ -99,10 +99,30 @@
                 <hr class="d-md-none m-0">
                 <div class="offcanvas-body">
                     <div class="navbar-nav me-auto">
-                        <a class="btn btn-link nav-link" href="#experience">Expericence</a>
-                        <a class="btn btn-link nav-link" href="#skills">Skills</a>
-                        <a class="btn btn-link nav-link" href="#projects">Projects</a>
-                        <a class="btn btn-link nav-link" href="#education">Education</a>
+                        <a class="btn btn-link nav-link" href="#experience">
+                            <span class="d-md-none">
+                                <i class="fa-solid fa-briefcase"></i>&nbsp;
+                            </span>
+                            Expericence
+                        </a>
+                        <a class="btn btn-link nav-link" href="#skills">
+                            <span class="d-md-none">
+                                <i class="fa-solid fa-code"></i>&nbsp;
+                            </span>
+                            Skills
+                        </a>
+                        <a class="btn btn-link nav-link" href="#projects">
+                            <span class="d-md-none">
+                                <i class="fa-solid fa-list-check"></i>&nbsp;
+                            </span>
+                            Projects
+                        </a>
+                        <a class="btn btn-link nav-link" href="#education">
+                            <span class="d-md-none">
+                                <i class="fa-solid fa-graduation-cap"></i>&nbsp;
+                            </span>
+                            Education
+                        </a>
                     </div>
     
                     <div class="navbar-nav ms-auto">
@@ -153,8 +173,9 @@
                 <p class="card-text m-0">
                     My timezone: 
                     <span class="text-primary fw-bold">Asia/Kuala_Lumpur (UTC+8)</span>
-                    <div class="border border-primary border-3 rounded p-3 text-center">
-                        <span id="clock" class="font-monospace fs-3 fw-bold"></span>
+                    <div class="border border-primary border-3 rounded p-3 text-center font-monospace fs-3 fw-bold">
+                        <span id="date"></span>
+                        <span id="time"></span>
                     </div>
                 </p>
             </div>
@@ -270,22 +291,12 @@
                 Current & Previous Projects
             </h5>
             <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item list-group-item-action">
-                        Cryptocurrency algorithmic trading bot
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        Payment Gateways
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        Web scraper
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        Stream ciphers
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        Research paper search engine
-                    </li>
+                <ul>
+                    <li>Cryptocurrency algorithmic trading bot</li>
+                    <li>Payment Gateways</li>
+                    <li>Web scraper</li>
+                    <li>Stream ciphers</li>
+                    <li>Research paper search engine</li>
                 </ul>
             </div>
         </div>
@@ -319,7 +330,7 @@
 
     <footer class="py-3 bg-body-tertiary">
         <p class="text-center text-body-secondary m-0">
-            Made with ❤️ by 
+            Built with ❤️ by 
             <a href="https://github.com/matyo-17" target="_blank">@matyo-17</a>
         </p>
     </footer>

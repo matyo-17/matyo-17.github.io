@@ -53,7 +53,13 @@ function checkConsent() {
     consent = getCookie('consent');
     if (!consent) {
         displayConcent();
+        return;
     }
+    hideRejectConsent();
+}
+
+function hideRejectConsent() {
+    $('#reject-consent').addClass('invisible');
 }
 
 function displayConcent() {
@@ -63,6 +69,7 @@ function displayConcent() {
 function giveConsent() {
     setCookie('consent', 1, 60);
     $('#consent').modal('hide');
+    hideRejectConsent();
 }
 
 function rejectConsent() {
@@ -118,5 +125,10 @@ function updateClock() {
     date = y + '-' + m.padStart(2, '0') + '-' + d.padStart(2, '0');
     time = h.padStart(2, '0') + ':' + i.padStart(2, '0') + ':' + s.padStart(2, '0');
 
-    $("#clock").html(date + " " + time);
+    alpha = (s >= 55) ? 1 : (0.6 + (s/200));
+    $("#time").css("color", "rgba(255, 0, 0, " + alpha + ")");
+
+
+    $("#date").html(date);
+    $("#time").html(time);
 }

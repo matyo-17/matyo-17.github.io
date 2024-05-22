@@ -35,6 +35,6 @@ a {
     scroll-margin-top: 60px;
 }
 
-#clock {
-    color: #ff0000;
+#date, #time {
+    color: rgba(255, 0, 0, 1);
 }
