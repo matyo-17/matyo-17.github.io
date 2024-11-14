@@ -1,8 +1,6 @@
 $(window).on("load", function() {
     checkConsent();
     loadTheme();
-    updateClock();
-    setInterval(updateClock, 1000);
 
     setTimeout(function () {
         $('#loader-container').css("opacity", 0.5);
@@ -25,9 +23,7 @@ function getCookie(name) {
         cookie = temp[0].trim();
         value = decodeURIComponent(temp[1]);
 
-        if (name == cookie) {
-            return value;
-        }
+        if (name == cookie) return value;
     }
 
     return null;
@@ -39,6 +35,10 @@ function setCookie(name, value, minutes=15) {
 
 function goGithubPage() {
     window.open("https://github.com/matyo-17", "_blank");
+}
+
+function goLinkedinPage() {
+    window.open("https://www.linkedin.com/in/filson-teo-7a380a20b/", "_blank");
 }
 
 function toggleDarkTheme() {
@@ -99,7 +99,7 @@ function loadTheme() {
         return;
     }
 
-    theme = "dark";
+    theme = "light";
     iconTheme(theme);
     setCookie('theme', theme);
     $("body").attr("data-bs-theme", theme);
@@ -107,28 +107,4 @@ function loadTheme() {
 
 function iconTheme(theme) {
     $("#github-icon").attr("src", "images/github-" + theme + ".png");
-}
-
-function updateClock() {
-    local = new Date();
-    utc = local.getTime() + (local.getTimezoneOffset() * 60000);
-    t = new Date(utc + (3600000 * 8));
-
-    y = t.getFullYear().toString();
-    m = t.getMonth().toString();
-    d = t.getDate().toString();
-
-    h = t.getHours().toString();
-    i = t.getMinutes().toString();
-    s = t.getSeconds().toString();
-
-    date = y + '-' + m.padStart(2, '0') + '-' + d.padStart(2, '0');
-    time = h.padStart(2, '0') + ':' + i.padStart(2, '0') + ':' + s.padStart(2, '0');
-
-    alpha = (s >= 55) ? 1 : (0.6 + (s/200));
-    $("#time").css("color", "rgba(255, 0, 0, " + alpha + ")");
-
-
-    $("#date").html(date);
-    $("#time").html(time);
 }

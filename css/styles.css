@@ -3,10 +3,6 @@ html {
     user-select: none;
 }
 
-a {
-    text-decoration: none;
-}
-
 .nav-link, .navbar-brand {
     color: rgba(255,255,255,0.85);
 }
@@ -29,6 +25,7 @@ a {
 
 .skills-icon {
     height: 1.7rem;
+    margin: 0.2rem;
 }
 
 .section {

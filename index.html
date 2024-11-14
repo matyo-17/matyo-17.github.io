@@ -16,7 +16,7 @@
     <script src="js/fontawesome-6.5.2.min.js"></script>
     <script src="js/scripts.js"></script>
 </head>
-<body data-bs-theme="dark">
+<body>
     <!-- loader -->
     <div class="justify-content-center align-items-center" id="loader-container">
         <div class="spinner-grow text-primary" role="status">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        This website uses cookies and collects information to ensure you get the best experience.
+                        This website uses cookies to ensure you get the best experience.
                     </p>
 
                     Cookies:
@@ -60,13 +60,9 @@
                         </li>
                     </ul>
 
-                    Information:
-                    <ul>
-                        <li>
-                            <div class="fw-bold text-body-secondary">Local timezone</div>
-                            Timezone of your location.
-                        </li>
-                    </ul>
+                    <span class="text-danger fs-6 fw-lighter">
+                        *The cookies will be stored for 60 minutes.
+                    </span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" id="reject-consent" onclick="rejectConsent()">Reject</button>
@@ -135,6 +131,10 @@
                             <i class="fa-brands fa-github"></i>
                             <span class="d-md-none">&nbsp;Github</span>
                         </button>
+                        <button class="btn btn-link nav-link px-3" onclick="goLinkedinPage()" type="button">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span class="d-md-none">&nbsp;LinkedIn</span>
+                        </button>
                         <button class="btn btn-link nav-link px-3" onclick="toggleDarkTheme()" type="button">
                             <i class="fa-solid fa-circle-half-stroke"></i>
                             <span class="d-md-none">&nbsp;Dark Theme</span>
@@ -156,9 +156,11 @@
             <div class="card-body">
                 <p class="card-text">
                     Hi there 👋, I am Teo Filson 
-                    <a href="https://github.com/matyo-17" target="_blank">@matyo-17</a>,
-                    a software engineer based in Malaysia
+                    <a class="link-underline link-underline-opacity-0" href="https://github.com/matyo-17" target="_blank">@matyo-17</a>,
+                    a software engineer based in Malaysia.
                     <br>
+                    My goal is to build software with clean, maintainable &amp; high quality code
+                    while thriving for a fast-paced development environment.
                 </p>
 
                 <span class="card-text">
@@ -172,16 +174,144 @@
                 </span>
                 
                 <p class="card-text m-0">
-                    My timezone: 
-                    <span class="text-primary fw-bold">Asia/Kuala_Lumpur (UTC+8)</span>
-                    <div class="border border-primary border-3 rounded p-3 text-center font-monospace fs-3 fw-bold">
-                        <span id="date"></span>
-                        <span id="time"></span>
-                    </div>
+                    My timezone: <span class="text-info fw-bold">Asia/Kuala_Lumpur (UTC+8)</span>
                 </p>
             </div>
         </div>
-        <!-- endgeneral information -->
+        <!-- end general information -->
+
+        <!-- skills -->
+        <div class="card m-3 shadow-lg section" id="skills">
+            <h5 class="card-header text-center">
+                <i class="fa-solid fa-code"></i>&nbsp;
+                Skills
+            </h5>
+            <div class="card-body">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2">
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Programming Languages
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/php.png" class="skills-icon" title="php">&nbsp;PHP</li>
+                                <li><img src="images/python.png" class="skills-icon" title="python">&nbsp;Python</li>
+                                <li><img src="images/js.png" class="skills-icon" title="javascript">&nbsp;JavaScript</li>
+                                <li><img src="images/java.png" class="skills-icon" title="java">&nbsp;JAVA</li>
+                                <li><img src="images/c.png" class="skills-icon" title="c">&nbsp;C</li>
+                                <li><img src="images/dart.png" class="skills-icon" title="dart">&nbsp;Dart</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Frameworks / Libraries
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/laravel.png" class="skills-icon" title="laravel">&nbsp;Laravel</li>
+                                <li><img src="images/django.png" class="skills-icon" title="django">&nbsp;Django</li>
+                                <li><img src="images/fastapi.png" class="skills-icon" title="fastapi">&nbsp;FastAPI</li>
+                                <li><img src="images/jupyter-notebook.png" class="skills-icon" title="jupyter-notebook">&nbsp;Jupyter Notebook</li>
+                                <li><img src="images/pandas.png" class="skills-icon" title="pandas">&nbsp;Pandas</li>
+                                <li><img src="images/numpy.png" class="skills-icon" title="numpy">&nbsp;Numpy</li>
+                                <li><img src="images/scikit-learn.png" class="skills-icon" title="scikit-learn">&nbsp;scikit-learn</li>
+                                <li><img src="images/tensorflow.png" class="skills-icon" title="numpy">&nbsp;Tensorflow</li>
+                                <li><img src="images/flutter.png" class="skills-icon" title="flutter">&nbsp;Flutter</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Databases
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/mysql.png" class="skills-icon" title="mysql">&nbsp;MySql</li>
+                                <li><img src="images/sqlite.png" class="skills-icon" title="sqlite">&nbsp;SQLite</li>
+                                <li><img src="images/redis.png" class="skills-icon" title="redis">&nbsp;Redis</li>
+                            </ul>
+                        </span>
+                    </div>
+                    
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Integration &amp; Deployment
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/docker.png" class="skills-icon" title="docker">&nbsp;Docker</li>
+                                <li><img src="images/github-actions.png" class="skills-icon" title="github actions">&nbsp;Github Actions</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Version Control
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/git.png" class="skills-icon" title="git">&nbsp;Git</li>
+                                <li><img src="images/github-light.png" class="skills-icon" title="github" id="github-icon">&nbsp;GitHub</li>
+                                <li><img src="images/gitlab.png" class="skills-icon" title="gitlab">&nbsp;GitLab</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Tools
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/vscode.png" class="skills-icon" title="vscode">&nbsp;Visual Studio Code</li>
+                                <li><img src="images/postman.png" class="skills-icon" title="postman">&nbsp;Postman</li>
+                            </ul>
+                        </span>
+                    </div>
+                    
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            HTML / CSS
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/html.png" class="skills-icon" title="html">&nbsp;HTML</li>
+                                <li><img src="images/css.png" class="skills-icon" title="css">&nbsp;CSS</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Development methodologies
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li>Scrum / Agile</li>
+                                <li>Waterfall</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="col">
+                        <h6 class="card-subtitle text-body-secondary">
+                            Others
+                        </h6>
+                        <span class="card-text">
+                            <ul>
+                                <li><img src="images/haskell.png" class="skills-icon" title="haskell">&nbsp;Haskell</li>
+                                <li><img src="images/matlab.png" class="skills-icon" title="matlab">&nbsp;MATLAB</li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end skills -->
 
         <!-- experience -->
         <div class="card m-3 shadow-lg section" id="experience">
@@ -201,89 +331,29 @@
                         technology solutions to users.
                         <br>
                         Website: 
-                        <a href="http://tornadointernet.co" target="_blank">http://tornadointernet.co</a>
+                        <a class="link-underline link-underline-opacity-0" href="http://tornadointernet.co" target="_blank">
+                            http://tornadointernet.co
+                        </a>
                     </p>
+
+                    <span class="card-text">
+                        Positions: 
+                        <ul>
+                            <li>Software Engineer II</li>
+                            <li>Software Engineer I (1 Year)</li>
+                            <li>Intern (3 months)</li>
+                        </ul>
+
+                        Projects handled:
+                        <ul>
+                            <li>Payment gateways (PHP / Laravel)</li>
+                            <li>Crypto tranding bot (Python / Django / Pandas / Numpy)</li>
+                        </ul>
+                    </span>
                 </div>
             </div>
         </div>
         <!-- end experience -->
-
-        <!-- skills -->
-        <div class="card m-3 shadow-lg section" id="skills">
-            <h5 class="card-header text-center">
-                <i class="fa-solid fa-code"></i>&nbsp;
-                Skills
-            </h5>
-            <div class="card-body">
-                <div class="row">
-                    <h6 class="card-subtitle text-body-secondary">
-                        Programming Languages (Backend)
-                    </h6>
-                    <span class="card-text">
-                        <ul>
-                            <li><img src="images/php.png" class="skills-icon" title="php">&nbsp;PHP</li>
-                            <li><img src="images/python.png" class="skills-icon" title="python">&nbsp;Python</li>
-                            <li><img src="images/java.png" class="skills-icon" title="java">&nbsp;JAVA</li>
-                            <li><img src="images/c.png" class="skills-icon" title="c">&nbsp;C</li>
-                        </ul>
-                    </span>
-
-                    <h6 class="card-subtitle text-body-secondary">
-                        Frontend
-                    </h6>
-                    <span class="card-text">
-                        <ul>
-                            <li><img src="images/js.png" class="skills-icon" title="javascript">&nbsp;JavaScript</li>
-                            <li><img src="images/html.png" class="skills-icon" title="html">&nbsp;HTML</li>
-                            <li><img src="images/css.png" class="skills-icon" title="css">&nbsp;CSS</li>
-                        </ul>
-                    </span>
-
-                    <h6 class="card-subtitle text-body-secondary">
-                        Databases
-                    </h6>
-                    <span class="card-text">
-                        <ul>
-                            <li><img src="images/mysql.png" class="skills-icon" title="mysql">&nbsp;MySql</li>
-                            <li><img src="images/sqlite.png" class="skills-icon" title="sqlite">&nbsp;SQLite</li>
-                            <li><img src="images/redis.png" class="skills-icon" title="redis">&nbsp;Redis</li>
-                        </ul>
-                    </span>
-
-                    <h6 class="card-subtitle text-body-secondary">
-                        Version Control
-                    </h6>
-                    <span class="card-text">
-                        <ul>
-                            <li><img src="images/git.png" class="skills-icon" title="git">&nbsp;Git</li>
-                            <li><img src="images/github-dark.png" class="skills-icon" title="github" id="github-icon">&nbsp;GitHub</li>
-                            <li><img src="images/gitlab.png" class="skills-icon" title="gitlab">&nbsp;GitLab</li>
-                        </ul>
-                    </span>
-
-                    <h6 class="card-subtitle text-body-secondary">
-                        Tools
-                    </h6>
-                    <span class="card-text">
-                        <ul>
-                            <li><img src="images/vscode.png" class="skills-icon" title="vscode">&nbsp;Visual Studio Code</li>
-                            <li><img src="images/postman.png" class="skills-icon" title="postman">&nbsp;Postman</li>
-                        </ul>
-                    </span>
-
-                    <h6 class="card-subtitle text-body-secondary">
-                        Others
-                    </h6>
-                    <span class="card-text">
-                        <ul>
-                            <li><img src="images/haskell.png" class="skills-icon" title="haskell">&nbsp;Haskell</li>
-                            <li><img src="images/matlab.png" class="skills-icon" title="matlab">&nbsp;MATLAB</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <!-- end skills -->
 
         <!-- projects -->
         <div class="card m-3 shadow-lg section" id="projects">
@@ -293,10 +363,18 @@
             </h5>
             <div class="card-body">
                 <ul>
+                    <li>
+                        Docker stack for Laravel 
+                        &nbsp;<a href="https://github.com/matyo-17/docker-laravel-stack">GitHub</a>
+                    </li>
+                    <li>
+                        MySql backup script 
+                        &nbsp;<a href="https://github.com/matyo-17/mysql-backup">GitHub</a>
+                    </li>
                     <li>Cryptocurrency algorithmic trading bot</li>
                     <li>Payment Gateways</li>
-                    <li>Web scraper</li>
-                    <li>Stream ciphers</li>
+                    <li>Web scrapers</li>
+                    <li>Stream ciphers performance evaluation</li>
                     <li>Research paper search engine</li>
                 </ul>
             </div>
@@ -332,7 +410,7 @@
     <footer class="py-3 bg-body-tertiary">
         <p class="text-center text-body-secondary m-0">
             Built with ❤️ by 
-            <a href="https://github.com/matyo-17" target="_blank">@matyo-17</a>
+            <a class="link-underline link-underline-opacity-0" href="https://github.com/matyo-17" target="_blank">@matyo-17</a>
         </p>
     </footer>
 </body>
